@@ -1,4 +1,4 @@
-/* Base styles */
+
 :root {
     --primary-color: #333;
     --secondary-color: #ff6b6b;
@@ -18,7 +18,7 @@ body {
     color: var(--primary-color);
 }
 
-/* Header styles */
+
 header {
     padding: 10px 0;
 }
@@ -64,7 +64,7 @@ nav {
     text-decoration: none;
 }
 
-/* Section styles */
+
 .content-section {
     display: flex;
     flex-wrap: wrap;
@@ -84,7 +84,7 @@ nav {
 .content-right img {
     max-width: 100%;
     height: auto;
-    border-radius: 10px; /* Add border-radius to all images */
+    border-radius: 10px; 
 }
 
 .buttons {
@@ -114,7 +114,6 @@ nav {
     background-color: var(--btn-hover);
 }
 
-/* Specific section styles */
 #home .content-left {
     display: flex;
     flex-direction: column;
@@ -131,12 +130,12 @@ nav {
 #customizable img,
 #testimonials img,
 #FAQs img {
-    max-width: 80%; /* Decrease the image size */
+    max-width: 80%; 
     height: auto;
-    border-radius: 10px; /* Add border-radius to specific images */
+    border-radius: 10px; 
 }
 
-/* Equal height for the last section content */
+
 #FAQs .content-container {
     display: flex;
     flex-wrap: wrap;
@@ -157,7 +156,7 @@ nav {
     margin-bottom: 20px;
 }
 
-/* Adjustments for images and text */
+
 .content-section img {
     max-width: 100%;
     height: auto;
@@ -167,7 +166,7 @@ nav {
     margin: 0 0 10px;
 }
 
-/* Centering and rounding image in the last section */
+
 section:last-of-type {
     display: flex;
     justify-content: center;
@@ -177,66 +176,13 @@ section:last-of-type {
 
 section:last-of-type img {
     border-radius: 15px;
-    max-width: 80%; /* Decrease the image size */
-    max-height: 80%; /* Decrease the image size */
+    max-width: 80%; 
+    max-height: 80%; 
     display: block;
 }
 
-/* Responsive styles */
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-    }
 
-    .nav-links {
-        flex-direction: column;
-        align-items: center;
-    }
 
-    .nav-links li {
-        margin-bottom: 10px;
-    }
-
-    .content-section {
-        flex-direction: column;
-    }
-
-    .content-left, .content-right {
-        min-width: 100%;
-    }
-}
-
-@media (max-width: 480px) {
-    .btn {
-        padding: 8px 12px;
-        font-size: 14px;
-    }
-
-    .footer-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .footer-column {
-        padding: 10px;
-        text-align: center;
-    }
-
-    .footer-column ul {
-        padding: 0;
-    }
-
-    .footer-column ul li {
-        margin-bottom: 5px;
-    }
-
-    .content-left img, 
-    .content-right img {
-        max-width: 100%; /* Make sure images don't exceed their container */
-    }
-}
-
-/* Footer Styles */
 footer {
     background-color: var(--footer-bg);
     padding: 20px 0;
@@ -299,16 +245,104 @@ footer {
     background-color: var(--footer-text);
 }
 
-/* Copyright Notice */
 .copyright {
     margin-top: 20px;
     font-size: 14px;
     color: var(--footer-text);
 }
 
-/* Heading Colors */
+
 #FAQs h1, #features h2, #advantages h2, #testimonials h2, #testimonials h3 {
     color: var(--secondary-color);
+}
+
+
+p {
+    text-align: justify; 
+    line-height: 1.5; 
+    padding-left: 20px; 
+    padding-right: 20px; 
+}
+
+#FAQs .content-left > div:nth-child(odd) {
+    background-color: #f2f2f2; 
+}
+
+#FAQs .content-right > div:nth-child(2) {
+    background-color: #f2f2f2; 
+}
+
+.content-section img {
+    border-radius: 10px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    transition: box-shadow 0.3s, transform 0.3s; 
+}
+
+.content-section img:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px); 
+}
+
+.content-section .content-left,
+.content-section .content-right {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column; 
+}
+
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links li {
+        margin-bottom: 10px;
+    }
+
+    .content-section {
+        flex-direction: column;
+    }
+
+    .content-left, .content-right {
+        min-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .btn {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-column {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .footer-column ul {
+        padding: 0;
+    }
+
+    .footer-column ul li {
+        margin-bottom: 5px;
+    }
+
+    .content-left img, 
+    .content-right img {
+        max-width: 100%; 
+    }
 }
 
 
